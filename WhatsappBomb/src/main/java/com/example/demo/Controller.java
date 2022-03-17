@@ -10,13 +10,13 @@ import WhatsappDrivers.Driver;
 @org.springframework.stereotype.Controller
 public class Controller {
 	Driver dt=new Driver();
-  @GetMapping("/greeting")
+  @GetMapping("/bomb")
   public String greetingForm(Model model) {
     model.addAttribute("greeting", new com.example.demo.Model());
     return "greeting";
   }
 
-  @PostMapping("/greeting")
+  @PostMapping("/bomb")
   public String greetingSubmit(@ModelAttribute com.example.demo.Model greeting, Model model) {
     model.addAttribute("greeting", greeting);
     dt.driver(greeting);
